@@ -1,0 +1,38 @@
+---
+inv_add_docker_swarm: true
+
+#inv_add_docker_swarm_is_manager: false
+
+inv_add_docker_swarm_ssl: true
+inv_add_docker_swarm_ssl_verify_cert: "no"
+inv_add_docker_swarm_ssl_path: "/etc/docker/swarm/ssl"
+inv_add_docker_swarm_tls_name: "{{ inventory_hostname }}"
+inv_add_docker_swarm_ca: "{{ inv_add_docker_swarm_ssl_path }}/ca-chain.pem.crt"
+inv_add_docker_swarm_key: "{{ inv_add_docker_swarm_ssl_path }}/my-docker-swarm-cluster.domain.tld.pem.key"
+inv_add_docker_swarm_cert: "{{ inv_add_docker_swarm_ssl_path }}/my-docker-swarm-cluster.domain.tld.pem.crt"
+inv_add_docker_swarm_portainer_volume_name: "portainer_data"
+inv_add_docker_swarm_portainer_https_port: 9443
+inv_add_docker_swarm_portainer_http_port: 9000
+
+inv_add_docker_swarm_cert_bundles:
+  - name: "My-Local-Ansible-Root-CA.pem.crt"
+    type: "CA"
+    src: "/tmp/My-Local-Ansible-Root-CA.pem.crt"
+
+  - name: "My-Local-Ansible-Intermediate-CA-1.pem.crt"
+    type: "CA"
+    src: "/tmp/My-Local-Ansible-Intermediate-CA-1.pem.crt"
+
+  - name: "My-Local-Ansible-Intermediate-CA-2.pem.crt"
+    type: "CA"
+    src: "/tmp/My-Local-Ansible-Intermediate-CA-2.pem.crt"
+
+  - name: "my-docker-swarm-cluster.domain.tld"
+    type: "cert"
+    src: "/tmp/my-docker-swarm-cluster.domain.tld.zip"
+    dest: "{{ inv_add_docker_swarm_ssl_path }}"
+    #src_user: "myUser"
+    #src_password: "secretPassword"
+    dest_user: "root"
+    dest_group: "root"
+    dest_mode: "0700"
