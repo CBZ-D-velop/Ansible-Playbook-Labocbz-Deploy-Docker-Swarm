@@ -104,3 +104,10 @@ Here you can put your change to keep a trace of your work and decisions.
 
 * [Ansible playbook documentation](https://docs.ansible.com/ansible/latest/playbook_guide/playbooks_reuse_playbooks.html)
 * [Ansible Molecule documentation](https://molecule.readthedocs.io/)
+* [labocbz.prepare_host]("https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Prepare-Host.git")
+* [labocbz.add_certificates]("https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Add-Certificates.git")
+* [labocbz.install_docker]("https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Install-Docker.git")
+* [labocbz.install_apache]("https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Install-Apache.git")
+* [labocbz.add_apache_confs]("https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Add-Apache-Confs.git")
+* [labocbz.add_logrotate_confs]("https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Add-Logrotate-Confs.git")
+* [labocbz.add_docker_swarm]("https://github.com/CBZ-D-velop/Ansible-Role-Labocbz-Add-Docker-Swarm.git)
