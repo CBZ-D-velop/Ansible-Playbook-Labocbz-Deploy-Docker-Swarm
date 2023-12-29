@@ -1,0 +1,5 @@
+---
+- name: "Include labocbz.deploy_docker_swarm playbook"
+  tags:
+      - "labocbz.deploy_docker_swarm"
+  ansible.builtin.import_playbook: "../../playbook.yml"
