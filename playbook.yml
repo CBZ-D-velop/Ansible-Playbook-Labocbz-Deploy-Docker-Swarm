@@ -171,7 +171,7 @@
           ansible.builtin.iptables:
             chain: "INPUT"
             protocol: "tcp"
-            destination_port: "{{ inv_install_docker_portainer_http_port }}"
+            destination_port: "{{ inv_add_docker_swarm_portainer_http_port }}"
             jump: "DROP"
             source: "! 127.0.0.1"
             comment: "Force external user to use Apache2"
@@ -180,7 +180,7 @@
           ansible.builtin.iptables:
             chain: "INPUT"
             protocol: "tcp"
-            destination_port: "{{ inv_install_docker_portainer_https_port }}"
+            destination_port: "{{ inv_add_docker_swarm_portainer_https_port }}"
             jump: "DROP"
             source: "! 127.0.0.1"
             comment: "Force external user to use Apache2"
