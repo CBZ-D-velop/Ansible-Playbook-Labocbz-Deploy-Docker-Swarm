@@ -100,7 +100,7 @@ To install this playbook, just copy/import this playbook or raw file into your f
 ```YAML
 # From AWX / Tower
 ---
-all vars from to put/from AWX / Tower
+
 ```
 
 ## Architectural Decisions Records
@@ -113,6 +113,13 @@ Here you can put your change to keep a trace of your work and decisions.
 * Added playbook
 * Added readme
 * Tested and validated in develop / validation
+
+### 2024-03-02: Fix and CI
+
+* Added support for new CI base
+* Edit all vars with __
+* Tested and validated on Docker
+
 ## Authors
 
 * Lord Robin Crombez

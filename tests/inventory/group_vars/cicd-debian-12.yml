@@ -1,0 +1,5 @@
+---
+inv_install_kubernetes_cluster__tls_sans:
+  - "molecule-cicd-debian-12-instance-1-deploy-docker-swarm"
+  - "molecule-cicd-debian-12-instance-2-deploy-docker-swarm"
+  - "molecule-cicd-debian-12-instance-3-deploy-docker-swarm"
