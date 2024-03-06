@@ -118,7 +118,7 @@ Here you can put your change to keep a trace of your work and decisions.
 
 * Added support for new CI base
 * Edit all vars with __
-* Tested and validated on Docker
+* Refaco and tested on Debian 11/12 and Ubuntu 22
 
 ## Authors
 
