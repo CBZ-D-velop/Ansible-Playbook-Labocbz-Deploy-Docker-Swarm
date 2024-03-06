@@ -27,7 +27,7 @@ platforms:
       - "/tmp"
     cgroupns_mode: "host"
     cgroup_manager: "cgroupfs"
-    storage_driver: "overlay2"
+    storage_driver: "overlay"
     networks:
       - name: "molecule-default-prepare-host"
 
@@ -50,7 +50,7 @@ platforms:
       - "/tmp"
     cgroupns_mode: "host"
     cgroup_manager: "cgroupfs"
-    storage_driver: "overlay2"
+    storage_driver: "overlay"
     networks:
       - name: "molecule-default-prepare-host"
 
@@ -73,7 +73,7 @@ platforms:
       - "/tmp"
     cgroupns_mode: "host"
     cgroup_manager: "cgroupfs"
-    storage_driver: "overlay2"
+    storage_driver: "overlay"
     networks:
       - name: "molecule-default-prepare-host"
 
