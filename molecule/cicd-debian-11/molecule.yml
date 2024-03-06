@@ -21,7 +21,7 @@ platforms:
       - "/tmp"
     cgroupns_mode: "host"
     cgroup_manager: "cgroupfs"
-    storage_driver: "overlay"
+    storage_driver: "overlay2"
     networks:
       - name: "molecule-cicd-debian-11-deploy-docker-swarm"
 
@@ -38,7 +38,7 @@ platforms:
       - "/tmp"
     cgroupns_mode: "host"
     cgroup_manager: "cgroupfs"
-    storage_driver: "overlay"
+    storage_driver: "overlay2"
     networks:
       - name: "molecule-cicd-debian-11-deploy-docker-swarm"
 
@@ -55,7 +55,7 @@ platforms:
       - "/tmp"
     cgroupns_mode: "host"
     cgroup_manager: "cgroupfs"
-    storage_driver: "overlay"
+    storage_driver: "overlay2"
     networks:
       - name: "molecule-cicd-debian-11-deploy-docker-swarm"
 
