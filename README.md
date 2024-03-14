@@ -118,7 +118,8 @@ Here you can put your change to keep a trace of your work and decisions.
 
 * Added support for new CI base
 * Edit all vars with __
-* Refaco and tested on Debian 11/12 and Ubuntu 22
+* Refaco and tested on Debian 11/12
+* Refacto and tested Ubuntu 22
 
 ## Authors
 
