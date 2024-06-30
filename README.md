@@ -22,7 +22,6 @@
 
 An Ansible playbook to deploy and configure a Docker Swarm cluster on your hosts.
 
-
 This Ansible playbook offers a comprehensive and automated solution for deploying and managing Docker Swarm, with a focus on simplifying the initialization and configuration process. The playbook seamlessly installs Docker, configures it to serve as a Swarm, and intelligently determines and designates nodes as managers and workers. The Swarm initialization process generates two crucial tokens: one for manager nodes and another for worker nodes.
 
 Upon successful Swarm initialization, the playbook orchestrates the deployment of the Portainer service. This service comprises a Portainer instance on a manager node and a replicated set of N agents distributed across all three nodes in the Swarm (adjustable by modifying the service Portainer file). The service configuration file is consistently present on all nodes, allowing post-deployment modifications without complications.
@@ -35,7 +34,7 @@ Users have the flexibility to configure node cleanup cron jobs for the removal o
 
 ## Deployment diagramm
 
-![](./assets/Ansible-Playbook-Labocbz-Deploy-Docker-Swarm.drawio.svg)
+![Ansible-Playbook-Labocbz-Deploy-Docker-Swarm](./assets/Ansible-Playbook-Labocbz-Deploy-Docker-Swarm.drawio.svg)
 
 Here is a potential deployment scenario using the playbook. We can observe that Portainer is installed on the same host as Apache2, which then functions as an SSL/TLS reverse proxy, WAF, QoS, Auth, etc. Portainer is primarily used for administering other servers, which connect through the default client port 8000 and cannot be included in the reverse proxy but accessible with the Portainer network of the Portainer service.
 
@@ -100,7 +99,7 @@ To install this playbook, just copy/import this playbook or raw file into your f
 ```YAML
 # From AWX / Tower
 ---
-all vars from to put/from AWX / Tower
+
 ```
 
 ## Architectural Decisions Records
@@ -113,6 +112,14 @@ Here you can put your change to keep a trace of your work and decisions.
 * Added playbook
 * Added readme
 * Tested and validated in develop / validation
+
+### 2024-03-02: Fix and CI
+
+* Added support for new CI base
+* Edit all vars with __
+* Refaco and tested on Debian 11/12
+* Refacto and tested Ubuntu 22
+
 ## Authors
 
 * Lord Robin Crombez
