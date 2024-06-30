@@ -9,7 +9,7 @@ driver:
 
 platforms:
   - name: "molecule-cicd-debian-12-instance-1-deploy-docker-swarm"
-    image: "${NEXUS_REPOS_DOCKER_REGISTRY}/${DOCKER_IMAGE__ANSIBLETEST_DEBIAN_12}"
+    image: "${NEXUS_DOCKER_GROUP_REGISTRY}/${DOCKER_IMAGE__ANSIBLETEST_DEBIAN_12}"
     hostname: "molecule-cicd-debian-12-instance-1-deploy-docker-swarm"
     privileged: true
     pre_build_image: true
@@ -26,7 +26,7 @@ platforms:
       - name: "molecule-cicd-debian-12-deploy-docker-swarm"
 
   - name: "molecule-cicd-debian-12-instance-2-deploy-docker-swarm"
-    image: "${NEXUS_REPOS_DOCKER_REGISTRY}/${DOCKER_IMAGE__ANSIBLETEST_DEBIAN_12}"
+    image: "${NEXUS_DOCKER_GROUP_REGISTRY}/${DOCKER_IMAGE__ANSIBLETEST_DEBIAN_12}"
     hostname: "molecule-cicd-debian-12-instance-2-deploy-docker-swarm"
     privileged: true
     pre_build_image: true
@@ -43,7 +43,7 @@ platforms:
       - name: "molecule-cicd-debian-12-deploy-docker-swarm"
 
   - name: "molecule-cicd-debian-12-instance-3-deploy-docker-swarm"
-    image: "${NEXUS_REPOS_DOCKER_REGISTRY}/${DOCKER_IMAGE__ANSIBLETEST_DEBIAN_12}"
+    image: "${NEXUS_DOCKER_GROUP_REGISTRY}/${DOCKER_IMAGE__ANSIBLETEST_DEBIAN_12}"
     hostname: "molecule-cicd-debian-12-instance-3-deploy-docker-swarm"
     privileged: true
     pre_build_image: true

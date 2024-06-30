@@ -51,7 +51,7 @@ variables:
     - "[ -f \"./molecule/$SCENARIO/requirements.yml\" ] && ansible-galaxy install -r ./molecule/$SCENARIO/requirements.yml --roles-path=./molecule/$SCENARIO/roles"
   script:
     - "molecule test --scenario-name $SCENARIO"
-  #allow_failure: false
+  allow_failure: false
   rules:
     - if: '$CI_COMMIT_MESSAGE=~/^[^Merge]/ && $CI_COMMIT_BRANCH == "develop"'
   needs:
@@ -114,13 +114,6 @@ molecule:test-debian-12:
     SCENARIO: "cicd-debian-12"
   rules:
     - if: '$CI_COMMIT_MESSAGE=~/^[^Merge]/ && $CI_COMMIT_BRANCH == "develop"'
-
-#molecule:test-docker-dind:
-#  <<: *molecule_test
-#  variables:
-#    SCENARIO: "cicd-docker-dind"
-#  rules:
-#    - if: '$CI_COMMIT_MESSAGE=~/^[^Merge]/ && $CI_COMMIT_BRANCH == "develop"'
 
 molecule:test-ubuntu-22:
   <<: *molecule_test
